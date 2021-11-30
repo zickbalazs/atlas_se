@@ -1,0 +1,31 @@
+body{
+    background-color: #738309;
+}
+header{
+    background-color: #738309;
+    height: 100%;
+    color: #fff;
+    border: solid 3px #000;
+}
+header h1{
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+}
+section p, section h2{
+    font-style: italic;
+    font-weight: bold;
+}
+footer p{
+    margin-bottom: 0;
+    font-style: italic;
+}
+.container {
+    padding-right: 0; /*15px in bootstrap.css*/
+    padding-left: 0;  /*idem*/
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
