@@ -11,13 +11,22 @@ header h1{
     text-shadow: 2px 2px 4px #000000;
     text-align: center;
 }
-section p, section h2{
+section{
+    margin-top: 200px;
+    text-shadow: 2px 2px 4px #000000;
+}
+section h2{
     font-style: italic;
     font-weight: bold;
+    margin-left:4px;
+    margin-right:4px;
+    margin-top:20%;
 }
 footer p{
     margin-bottom: 0;
-    font-style: italic;
+    font-style: italic;    
+    margin-left:4px;
+    text-shadow: 2px 2px 4px #000000;
 }
 .container {
     padding-right: 0; /*15px in bootstrap.css*/
