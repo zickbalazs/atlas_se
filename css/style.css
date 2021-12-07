@@ -5,7 +5,7 @@ header{
     background-color: #738309;
     border: solid 3px #000;
     min-height: 25vh;
-    background-image: url('/img/strongman.png');
+    background-image: url('../img/strongman.png');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -22,7 +22,7 @@ article{
 }
 article::after{
     content:"";
-    background: url('/img/watermark.png');
+    background: url('../img/watermark.png');
     background-repeat: no-repeat;
     background-position: bottom;
     background-size:50%;
