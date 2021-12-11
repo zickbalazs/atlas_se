@@ -1,19 +1,34 @@
+@font-face{
+    font-family: 'ALGER';
+    src: url('../font/ALGER.eot');
+    src: local('ALGER'), url('../font/ALGER.woff') format('woff'), url('../font/ALGER.ttf') format('truetype');
+}
 body{
-    background-color: #34450f;
+    background-color: #384b13;
 }
 header{
-    background-color: #738309;
-    border: solid 3px #000;
+    background-color: #57721852;
+    border-bottom: solid 3px #000;
+    border-top: solid 1px #000;
     min-height: 25vh;
-    background-image: url('../img/strongman.png');
+    background-image: url('../img/logo.png'), url('../img/logo.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left, right;
     padding-top: 200px;
+    font-family: 'ALGER';
+}
+@media only screen and (max-width:479px){
+    header{
+        background-image:  none;
+    }
+    article::after{
+        background: none;
+    }
 }
 header h1{
     text-shadow: 1px 1px 4px #fff;
-    color: #155b27;
+    color: #316b25;
 }
 article{
     text-shadow: 2px 2px 4px #000000;
@@ -22,10 +37,10 @@ article{
 }
 article::after{
     content:"";
-    background: url('../img/watermark.png');
+    background: url('../img/strongman.png');
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size:50%;
+    background-size: contain;
     position: absolute;
     z-index: -1;  
     opacity: 0.2;
