@@ -10,7 +10,15 @@
 body{
     background-color: #384b13;
 }
-#margo-fent{
+.bi-phone-fill{
+    font-size: 3vw;
+    color:green;
+}
+#tel{
+    font-size: 2vw;
+    display:inline;
+}
+.telefo#margo-fent{
     margin-top:150px;
 }
 header{
@@ -77,6 +85,7 @@ nav img{
 }
 nav{
     font-size: 14pt;
+    border-bottom: 1px solid black;
 }
 .kepdoboz img{
     max-width: 15vw;
