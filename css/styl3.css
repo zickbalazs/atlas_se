@@ -1,1 +1,28 @@
+.container {
+    padding-right: 0; 
+    padding-left: 0;  
+    margin-right: auto;
+    margin-left: auto;
+}
+.container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
 /*Ez a sportágaknak a html oldalához lesz css! ne használd a többihez!*/
+body{
+    background-color:darkgray;
+    color:white;
+}
+nav{
+    background-color: black;
+    text-align: center;
+}
+article{
+    background-color: rgb(44, 44, 44);
+}
+header{
+    background-color: rgb(78, 78, 78);
+    background: linear-gradient(rgb(78, 78, 78), black);
+    height: 10vh;
+    text-align: center;
+}
