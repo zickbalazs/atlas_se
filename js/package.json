@@ -1,0 +1,17 @@
+{
+  "name": "atlas-se",
+  "version": "1.0.0",
+  "description": "Atlas SE Backend Server",
+  "main": "news.js",
+  "scripts": {
+    "test": "test",
+    "start": "node news.js"
+  },
+  "author": "Zick Balázs",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.17.3",
+    "mysql": "^2.18.1"
+  }
+}
