@@ -1,11 +1,18 @@
 let express = require('express'),
     bodyparser = require('body-parser'),
-    mysql = require('mysql');
+    mysql = require('mysql'),
+    path = require('path');
 let server = express();
-let routes = express.Router();
 
 server.use(bodyparser.urlencoded({extended:false}));
 server.use(bodyparser.json());
+//server.use(express.static(path.join(__dirname, '../')));
+
+
+//server.get('/',(req, res)=>{
+//    res.sendFile(path.join(__dirname, '../index.html'));
+//})
+
 
 server.get('/api/news', (req, res)=>{
     let sql = mysql.createConnection({
@@ -18,19 +25,30 @@ server.get('/api/news', (req, res)=>{
             console.log(new Date().toLocaleTimeString() + err);
         }
         else{
-            let command = "SELECT * FROM news order by id desc";
+            let command = "SELECT * FROM news order by date desc";
             sql.query(command, (err, result)=>{
                 if (err){
                     console.log(new Date().toLocaleTimeString() + err);
                 }
-                else{
-                    console.log(result);
-                }
+                res.json(result);
             })
         }
     })
 });
-
+server.get('/api/login', (req, res)=>{
+    let sql = mysql.createConnection({
+        host:"localhost",
+        user:req.body.user,
+        password:req.body.pass,
+        database: "atlas"
+    });
+    sql.connect((err)=>{
+        if (err) {
+            res.status(401).send(err);
+        }
+        else {res.send("success")}
+    });
+});
 server.post('/api/create-article', (req, res)=>{
     SendPosts(req.body, res);
     if (res.statusCode=200) res.send("Thx");
