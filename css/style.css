@@ -1,8 +1,11 @@
+:root{
+    --dark: rgb(58, 58, 58);
+}
+
 body, html{
     margin: 0;
     padding: 0;
     width: 100%;
-    background: linear-gradient(#384b13, #435a16);
 }
 header{
     height: 300px;
@@ -10,7 +13,7 @@ header{
     justify-content: space-between;
     flex-wrap: row wrap;
     text-align: right;
-    background-color: rgba(0, 0, 0, 0.349);
+    background-color: rgb(26, 53, 15);
     background-image: url('../img/strongman.png');
     background-repeat: no-repeat;
     background-position:50% 0%;
@@ -168,6 +171,9 @@ footer>p:last-of-type{
 #current{
     color:white;
 }
+#toggler{
+    cursor:pointer;
+}
 button{
     display:none;
     height: 50px;
@@ -177,6 +183,9 @@ button{
     background-color: transparent;
     color:rgb(122, 122, 122);
     border: none;
+}
+.darkmode{
+    background-color: var(--dark);
 }
 button::after{
     content:"Menü";

@@ -20,49 +20,51 @@
         <button type="button"><i class="bi bi-list"></i></button>
         <div class="nav">
             <p><a href="#article" id="current">Főoldal</a></p>
-            <p><a href="html/about.html">Az egyesületről</a></p>
+            <p><a href="/about">Az egyesületről</a></p>
             <div class="menu">
-                <p><a href="html/sport.html">Sportágaink</a></p>
+                <p><a href="/sports">Sportágaink</a></p>
                 <div class="menu-content">
-                    <div><i class="bi bi-arrow-return-right"></i><a href="html/sport/eroemeles.html">Erőemelés</a></div>
-                    <div><i class="bi bi-arrow-return-right"></i><a href="html/sport/testepites.html">Testépítés</a></div>
-                    <div><i class="bi bi-arrow-return-right"></i><a href="html/sport/erosport.html">Erősport</a></div>
+                    <div><i class="bi bi-arrow-return-right"></i><a href="/sports/eroemeles">Erőemelés</a></div>
+                    <div><i class="bi bi-arrow-return-right"></i><a href="/sports/testepites">Testépítés</a></div>
+                    <div><i class="bi bi-arrow-return-right"></i><a href="/sports/erosport">Erősport</a></div>
                 </div>
             </div>
-            <p><a href="html/news.html">Hírek</a></p>
-            <p><a href="html/partner.html">Támogatóink</a></p>
+            <p><a href="/news">Hírek</a></p>
+            <p><a href="/partners">Támogatóink</a></p>
+            <p id="toggler"><i style="color:white" class="bi bi-moon"></i></p>
         </div>
     </nav>
-    <article>
+    <article id="article">
         <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In soluta voluptatum labore quidem non corporis illo, inventore praesentium quod iste hic consectetur nam fugit saepe, nihil, atque ab minus voluptates.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi labore sunt unde officia explicabo id nulla est veritatis assumenda officiis saepe facere, ipsa, aut molestiae doloremque autem voluptates magni placeat.</p>
+        <h2>Szolgáltatások: </h2>
         <div class="artFlex">
             <div class="over">
                 <img src="img/sample.jpg" alt="">
                 <div>
-                    <p><a href="">Egyesületünkről</a></p>
+                    <p><a href="/about">Egyesületünkről</a></p>
                     <p>Tudj meg mindent egyesületünkről.</p>
                 </div>
             </div>
             <div class="over">
                 <img src="img/sample.jpg" alt="">
                 <div>
-                    <p><a href="">Sportágaink</a></p><br>
+                    <p><a href="/sports">Sportágaink</a></p><br>
                     <p>Nézd meg egyesületünk milyen sportágakban vesz részt.</p>
                 </div>
             </div>
             <div class="over">
                 <img src="img/sample.jpg" alt="">
                 <div>
-                    <p><a href="">Aktualitások</a></p><br>
+                    <p><a href="/news">Aktualitások</a></p><br>
                     <p>Hírek az egyesületről</p>
                 </div>
             </div>
             <div class="over">
                 <img src="img/sample.jpg" alt="">
                 <div>
-                    <p><a href="">Támogatóink</a></p><br>
+                    <p><a href="/supporters">Támogatóink</a></p><br>
                     <p>Támogatóink információi.</p>
                 </div>
             </div>
@@ -71,6 +73,8 @@
     <footer>
         <p>Csili Zoltán 2022.</p>
         <p><i class="bi bi-filetype-html"></i> Zick Balázs</p>
+        <p><a href="/admin">Adminisztráció</a></p>
     </footer>
+    <script src="js/moontoggler.js"></script>
 </body>
 </html>

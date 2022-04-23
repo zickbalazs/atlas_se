@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,7 @@
     <meta name="author" content="Zick Balázs, Csili Zoltán">
     <title>Bátmonostori Atlas SE</title>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="shortcut icon" href="img/lg.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/lg.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <title>Atlas SE - Sportágak</title>
 </head>
@@ -17,19 +17,23 @@
     <nav>
         <button type="button"><i class="bi bi-list"></i></button>
         <div class="nav">
-            <p><a href="../index.html">Főoldal</a></p>
-            <p><a href="about.html">Az egyesületről</a></p>
+            <p><a href="/">Főoldal</a></p>
+            <p><a href="/about">Az egyesületről</a></p>
             <div class="menu">
                 <p><a href="#" id="current">Sportágaink</a></p>
                 <div class="menu-content">
-                    <div><i class="bi bi-arrow-return-right"></i><a href="sport/eroemeles.html">Erőemelés</a></div>
-                    <div><i class="bi bi-arrow-return-right"></i><a href="sport/testepites.html">Testépítés</a></div>
-                    <div><i class="bi bi-arrow-return-right"></i><a href="sport/erosport.html">Erősport</a></div>
+                    <div><i class="bi bi-arrow-return-right"></i><a href="/sports/eroemeles">Erőemelés</a></div>
+                    <div><i class="bi bi-arrow-return-right"></i><a href="/sports/testepites">Testépítés</a></div>
+                    <div><i class="bi bi-arrow-return-right"></i><a href="/sports/erosport">Erősport</a></div>
                 </div>
             </div>
-            <p><a href="html/news.html">Hírek</a></p>
-            <p><a href="html/partner.html">Támogatóink</a></p>
+            <p><a href="/news">Hírek</a></p>
+            <p><a href="/supporters">Támogatóink</a></p>
+            <p id="toggler"><i style="color:white" class="bi bi-moon"></i></p>
         </div>
     </nav>
+
+
+    <script src="../js/moontoggler.js"></script>
 </body>
 </html>
