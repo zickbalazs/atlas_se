@@ -1,7 +1,10 @@
+const { env } = require('process');
+
 let express = require('express'),
     bodyparser = require('body-parser'),
     mysql = require('mysql'),
-    path = require('path');
+    path = require('path'),
+    port = 5500 || process.env.PORT;
 let server = express();
 
 server.use(bodyparser.urlencoded({extended:false}));
