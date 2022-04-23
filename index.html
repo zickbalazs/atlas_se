@@ -1,75 +1,76 @@
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="img/lg.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Bátmonostori Atlas SE weboldala">
+    <meta name="title" content="Bátmonostori Atlas SE">
+    <meta name="author" content="Zick Balázs, Csili Zoltán">
     <title>Bátmonostori Atlas SE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/lg.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 </head>
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#Elem">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <a href="#" class="navbar-brand">
-                <img src="img/logo.png" alt="">
-            </a>
-            <div class="collapse navbar-collapse" id="Elem">
-                <div class="navbar-nav">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a href="#" class="nav-link">Kezdőlap</a></li>
-                        <li class="nav-item"><a href="html/rolunk.html" class="nav-link">Rólunk</a></li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="html/sportok/erosport.html">
-                                Erősport
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="html/sportok/eroemeles.html" class="nav-link">
-                                Erőemelés
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="html/sportok/testepites.html" class="nav-link">
-                                Testépítés
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="html/tamogatok.html" class="nav-link">Támogatók</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="html/kapcsolat.html" class="nav-link">Kapcsolat</a>
-                        </li>
-                    </ul>
+    <header>
+        <img src="img/lg.png" alt="">
+        <h1>Bátmonostori Atlas SE</h1>
+    </header>
+    <nav>
+        <button type="button"><i class="bi bi-list"></i></button>
+        <div class="nav">
+            <p><a href="#article" id="current">Főoldal</a></p>
+            <p><a href="html/about.html">Az egyesületről</a></p>
+            <div class="menu">
+                <p><a href="html/sport.html">Sportágaink</a></p>
+                <div class="menu-content">
+                    <div><i class="bi bi-arrow-return-right"></i><a href="html/sport/eroemeles.html">Erőemelés</a></div>
+                    <div><i class="bi bi-arrow-return-right"></i><a href="html/sport/testepites.html">Testépítés</a></div>
+                    <div><i class="bi bi-arrow-return-right"></i><a href="html/sport/erosport.html">Erősport</a></div>
                 </div>
             </div>
-        </nav>
-        <div id="grad">
-            <header>
-            
-                <h1 class="text-center">Bátmonostori Atlas SE</h1>
-            
-            </header>
+            <p><a href="html/news.html">Hírek</a></p>
+            <p><a href="html/partner.html">Támogatóink</a></p>
         </div>
-    </div>
-    <div class="container text-white">
-        <article id="margo-fent">
-            <h2 class="text-center my-5">"Ne csak prédikálj arról, hogy erős vagy -bizonyítsd be" - James DiMelo.</h2>
-            <p class="text-justify my-5">Ezzel az erős emberek világában találó idézettel köszöntöm minden kedves látogatónkat.</p>
-        </article>
-    </div>
-    <div class="container">
-        <footer id="margo-fent">
-            <p>Csili Zoltán</p>
-            <p>elnök</p>
-            <p>Bátmonostori Atlas Sportegyesület </p>
-        </footer>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    </nav>
+    <article>
+        <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In soluta voluptatum labore quidem non corporis illo, inventore praesentium quod iste hic consectetur nam fugit saepe, nihil, atque ab minus voluptates.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi labore sunt unde officia explicabo id nulla est veritatis assumenda officiis saepe facere, ipsa, aut molestiae doloremque autem voluptates magni placeat.</p>
+        <div class="artFlex">
+            <div class="over">
+                <img src="img/sample.jpg" alt="">
+                <div>
+                    <p><a href="">Egyesületünkről</a></p>
+                    <p>Tudj meg mindent egyesületünkről.</p>
+                </div>
+            </div>
+            <div class="over">
+                <img src="img/sample.jpg" alt="">
+                <div>
+                    <p><a href="">Sportágaink</a></p><br>
+                    <p>Nézd meg egyesületünk milyen sportágakban vesz részt.</p>
+                </div>
+            </div>
+            <div class="over">
+                <img src="img/sample.jpg" alt="">
+                <div>
+                    <p><a href="">Aktualitások</a></p><br>
+                    <p>Hírek az egyesületről</p>
+                </div>
+            </div>
+            <div class="over">
+                <img src="img/sample.jpg" alt="">
+                <div>
+                    <p><a href="">Támogatóink</a></p><br>
+                    <p>Támogatóink információi.</p>
+                </div>
+            </div>
+        </div>
+    </article>
+    <footer>
+        <p>Csili Zoltán 2022.</p>
+        <p><i class="bi bi-filetype-html"></i> Zick Balázs</p>
+    </footer>
 </body>
 </html>
