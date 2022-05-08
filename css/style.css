@@ -1,11 +1,12 @@
 :root{
-    --dark: rgb(58, 58, 58);
+    --dark: rgb(37, 37, 37);
 }
 
 body, html{
     margin: 0;
     padding: 0;
     width: 100%;
+    transition: background-color 0.1s;
 }
 header{
     height: 300px;

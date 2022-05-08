@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/adminhub.css">
+    <link rel="stylesheet" href="../js/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Új cikk készítése</h1>
+    </header>
+    <nav>
+        <p><a href="/admin/dashboard"><i class="bi bi-arrow-left"></i>Menü</a></p>
+    </nav>
+    <main>
+        <form action="">
+            <label for="category">Hír Kategória:</label>
+            <select name="category" id="category">
+                <option value="0">Fontos</option>
+                <option value="1">Bejelentés</option>
+                <option value="2">Eredmények</option>
+                <option value="3">Album</option>
+                <option value="4">Egyéb</option>
+            </select>
+            <label for="title">Cím:</label>
+            <input type="text" name="title" id="title">
+            <label for="short">Rövid leírás:</label>
+            <input type="text" name="short" id="short">
+            <label for="article">Teljes szöveg: </label>
+            <textarea name="article" id="article" cols="30" rows="10"></textarea>
+            <label for="picture">Kép feltöltése:</label>
+            <input type="file" name="picture" id="picture">
+            <button type="button">Cikk feltöltése</button>
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

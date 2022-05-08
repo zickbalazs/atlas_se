@@ -3,44 +3,15 @@ let express = require('express'),
     mysql = require('mysql'),
     path = require('path'),
     port = process.env.PORT || 5501,
-    server = express();
+    server = express(),
+    routes = require('./routes');
 
 
 //Válaszfogadás
 server.use(bodyparser.urlencoded({extended:false}));
 server.use(bodyparser.json());
 server.use(express.static(path.join(__dirname, '../')));
-
-
-//Web navigáció
-server.get('/',(req, res)=>{
-    res.sendFile(path.join(__dirname, '../index.html'));
-});
-server.get('/sports', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../html/sport.html'));
-});
-server.get('/about', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../html/about.html'));
-});
-server.get('/news', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../html/news.html'));
-});
-server.get('/supporters', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../html/supporters.html'));
-});
-server.get('/sports/eroemeles', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../html/sport/eroemeles.html'));
-});
-server.get('/sports/testepites', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../html/sport/testepites.html'));
-});
-server.get('/sports/erosport', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../html/sport/erosport.html'));
-});
-server.get('/administration', (req, res)=>{
-    res.sendFile(path.join(__dirname, '../admin/hub.html'));
-})
-
+server.use('/', routes);
 //API
 server.get('/api/news', (req, res)=>{
     let sql = mysql.createConnection({
@@ -63,55 +34,28 @@ server.get('/api/news', (req, res)=>{
         }
     })
 });
-server.get('/api/login', (req, res)=>{
+server.post('/admin/login', (req,res)=>{
     let sql = mysql.createConnection({
         host:"localhost",
-        user:req.body.user,
-        password:req.body.pass,
-        database: "atlas"
+        user:"LoginCheck",
+        database:"atlas"
     });
-    sql.connect((err)=>{
-        if (err) {
-            res.status(401).send(err);
+    console.log(req.body)
+    sql.query(`select * from login where username="${req.body.username}" and password="${req.body.password}"`, (err, results)=>{
+        if (err) console.log(err);
+        else{
+            if (results.length>0) {
+                console.log(req.body.username+" has logged in");
+                res.status(200).send('Successful login');
+            }
+            else {
+                res.status(401).send('Unauthorized login!');
+            }
         }
-        else {res.send("success")}
     });
-});
-server.post('/api/create-article', (req, res)=>{
-    SendPosts(req.body, res);
-    if (res.statusCode=200) res.send("Thx");
-    else res.send("Valami szar");
+
+
 });
 server.listen(port, ()=>{
     console.log('listening on '+port)
 })
-
-
-function SendPosts(articleJSON, res){
-    let picid = articleJSON.Pic,
-        date = articleJSON.Date,
-        author = articleJSON.Author,
-        sh_Txt = articleJSON.Short,
-        article = articleJSON.Article,
-        category = articleJSON.Category,
-        password = articleJSON.Pass,
-        connection = mysql.createConnection({
-        host: "localhost",
-        user: "creator",
-        database: "atlas",
-        password: password
-    });
-    connection.connect((err)=>{
-        if (err) {
-            res.send(new Date().toLocaleTimeString() + err);
-        }
-        else{
-            let SQL = `INSERT INTO news (author, date, short, article, c_id, picid) VALUES ("${author}", "${date}", "${sh_Txt}", "${article}", ${category}, ${picid})`;
-            connection.query(SQL, (err, result)=>{
-                if (err) console.log(new Date().toLocaleTimeString() + err)
-                else console.log(new Date().toLocaleTimeString() + result);
-            });
-        }
-    });
-    console.log(new Date().toLocaleTimeString() + " insert zárva");
-}

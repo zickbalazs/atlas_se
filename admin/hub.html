@@ -4,15 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atlas SE - Adminisztráció</title>
+    <link rel="stylesheet" href="../css/adminhub.css">
+    <link rel="stylesheet" href="../js/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
 </head>
 <body>
-    <h1>Üdv</h1>
-    <form action="login.html" method="get" id="form">
-        <label for="user">Felhasználónév</label><input type="text" name="user" id="user">
-        <label for="pass">Jelszó</label><input type="password" name="pass" id="pass">
-        <input type="button" value="Login">
-    </form>
-    <script src="js/login.js"></script>
+    <div class="cont">
+        <header>
+            <h1>Üdv</h1>
+        </header>
+        <main>
+            <div class="flex">
+                <a href="/admin/new-article"><div>
+                    <h2>Hír készítés</h2>
+                    <p><i class="bi bi-file-earmark-post"></i></p>
+                </div></a>
+                <a href="/admin/mod-article"><div>
+                    <h2>Hír módosítás</h2>
+                    <p><i class="bi bi-stickies"></i></p>
+                </div></a>
+            </div>
+            <div class="flex">
+                <a id="logout" href="#"><div>
+                    <h2>Kijelentkezés</h2>
+                    <p><i class="bi bi-door-closed"></i></p>
+                </div></a>
+                <a href="/admin/users"><div>
+                    <h2>Új felhasználó felvétele</h2>
+                    <p><i class="bi bi-file-earmark-person"></i></p>
+                </div></a>
+            </div>
+        </main>
+        <hr>
+        <footer class="footerflex">
+            <p id="toggler"><i class="bi bi-moon"></i></p>
+            <p id="copy">Készítette Zick Balázs &copy;2022.</p>
+            <p id="mail"><a href="mailto:balazs.zick2@gmail.com"><i class="bi bi-envelope"></i></a></p>
+        </footer>
+    </div>
+    <script src="../js/check.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/greeter.js"></script>
+    <script src="../js/moontoggler.js"></script>
 </body>
 </html>
