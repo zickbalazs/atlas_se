@@ -22,6 +22,15 @@ button:hover{
     color:white;
     font-weight: light;
 }
+nav{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    margin-bottom:2rem;
+}
+nav>p{
+    margin: 0;
+}
 #picture{
     background-color: transparent;
     border:none;
@@ -47,6 +56,9 @@ input, textarea, select{
     border-radius:5px;
     border: 1px solid gray;
     width: 100%;
+}
+main{
+    margin-bottom:2rem;
 }
 input, select{
     height:40px;

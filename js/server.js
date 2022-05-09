@@ -4,36 +4,58 @@ let express = require('express'),
     path = require('path'),
     port = process.env.PORT || 5501,
     server = express(),
-    routes = require('./routes');
+    routes = require('./routes'),
+    multer = require('multer'),
+    storage = multer.diskStorage({
+        destination: (req, file, cb)=>{cb(null, path.join(__dirname,"../img/uploads/"))},
+        filename:(req,file,cb)=>cb(null, Date.now()+path.extname(file.originalname))
+    }),
+    upload = multer({storage:storage});
 
-
+function getDate(){
+    let d = new Date();
+    return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()} ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`
+}
 //Válaszfogadás
 server.use(bodyparser.urlencoded({extended:false}));
 server.use(bodyparser.json());
 server.use(express.static(path.join(__dirname, '../')));
 server.use('/', routes);
 //API
-server.get('/api/news', (req, res)=>{
-    let sql = mysql.createConnection({
+server.post('/api/upload-article', upload.single('postimg'), (req, res)=>{
+    let q = mysql.createConnection({
         host:"localhost",
-        user:"Reader",
+        user:"root",
         database:"atlas"
-    });
-    sql.connect((err)=>{
-        if (err) {
-            console.log(new Date().toLocaleTimeString() + err);
-        }
-        else{
-            let command = "SELECT * FROM news order by date desc";
-            sql.query(command, (err, result)=>{
-                if (err){
-                    console.log(new Date().toLocaleTimeString() + err);
-                }
-                res.json(result);
-            })
-        }
     })
+    if (req.file!=undefined){
+        let date = getDate();
+        q.query(`insert into articles (postdate, category, author, title, short, article, picture) values ("${date}", "${req.body.category}","${req.body.author}", "${req.body.title}", "${req.body.short}", "${req.body.article}", "${req.file.filename}")`, (err)=>{
+            if (err) console.log(err)
+            else res.status(200).send("Successful upload");
+        });
+    }
+    else {
+        let date = getDate();
+        q.query(`insert into articles (postdate, category, author, title, short, article, picture) values ("${date}", "${req.body.category}","${req.body.author}", "${req.body.title}", "${req.body.short}", "${req.body.article}", "null")`, (err)=>{
+            if (err) console.log(err)
+            else res.status(200).send("Successful upload");
+        });
+    }
 });
+server.get('/api/get-articles', (req, res)=>{
+    let offset = req.query.page,
+        limit = req.query.posts;
+    let q = mysql.createConnection({
+        host:"localhost",
+        user:"LoginCheck",
+        database:"atlas"
+    })
+    q.query(`select * from articles order by postdate desc limit ${limit} offset ${offset}`, (err, result)=> {
+        if (err) console.log(err);
+        res.status(200).send(result);
+    });
+})
 server.post('/admin/login', (req,res)=>{
     let sql = mysql.createConnection({
         host:"localhost",
@@ -56,6 +78,7 @@ server.post('/admin/login', (req,res)=>{
 
 
 });
+//szerver
 server.listen(port, ()=>{
     console.log('listening on '+port)
 })

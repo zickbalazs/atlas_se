@@ -24,7 +24,7 @@
                 <option value="0">Fontos</option>
                 <option value="1">Bejelentés</option>
                 <option value="2">Eredmények</option>
-                <option value="3">Album</option>
+                <option value="3">Album/Képek</option>
                 <option value="4">Egyéb</option>
             </select>
             <label for="title">Cím:</label>
@@ -34,7 +34,7 @@
             <label for="article">Teljes szöveg: </label>
             <textarea name="article" id="article" cols="30" rows="10"></textarea>
             <label for="picture">Kép feltöltése:</label>
-            <input type="file" name="picture" id="picture">
+            <input type="file" accept="image" name="picture" id="picture">
             <button type="button">Cikk feltöltése</button>
         </form>
     </main>
@@ -44,5 +44,6 @@
         <p id="mail"><a href="mailto:balazs.zick2@gmail.com"><i class="bi bi-envelope"></i></a></p>
     </footer>
     <script src="../js/moontoggler.js"></script>
+    <script src="../js/upload.js"></script>
 </body>
 </html>
