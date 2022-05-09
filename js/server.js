@@ -53,7 +53,7 @@ server.get('/api/get-articles', (req, res)=>{
     })
     q.query(`select * from articles order by postdate desc limit ${limit} offset ${offset}`, (err, result)=> {
         if (err) console.log(err);
-        res.status(200).send(result);
+        res.status(200).json(result);
     });
 })
 server.post('/admin/login', (req,res)=>{

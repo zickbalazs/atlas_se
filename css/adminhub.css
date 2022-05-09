@@ -123,3 +123,9 @@ footer p>a{
 .lightmode-f, .lightmode-f>a{
     color:white;
 }
+#error{
+    color:rgb(143, 0, 0);
+}
+tbody>tr{
+    border-bottom:1px solid black;
+}

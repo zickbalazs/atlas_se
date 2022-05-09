@@ -21,5 +21,6 @@ else{
             }));
             window.location.href='/admin/dashboard';
         }
+        else document.querySelector('#error').innerText = "Hibás bejelentkezési adatok!";
     })
 }
