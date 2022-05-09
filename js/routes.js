@@ -32,5 +32,14 @@ routes.get('/admin', (req, res)=>{
 routes.get('/admin/dashboard', (req, res)=>{
     res.sendFile(path.join(__dirname, '../admin/hub.html'));
 })
+routes.get('/admin/new-article', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../admin/articlemaker.html'));
+})
+routes.get('/admin/mod-article', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../admin/articlechanger.html') );
+})
+routes.get('/admin/users', (req, res)=>{
+    res.sendFile(path.join(__dirname, '../admin/users.html'));
+})
 
 module.exports=routes;
