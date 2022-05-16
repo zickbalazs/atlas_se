@@ -96,6 +96,9 @@ h2{
 #toggler{
     cursor:pointer;
 }
+.editor{
+    display:block;
+}
 .flex>a:hover{
     color:rgb(255, 255, 255);
     background-color:rgb(0, 110, 138);

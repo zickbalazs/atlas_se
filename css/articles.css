@@ -1,0 +1,42 @@
+article>img{
+    margin:auto;
+    width: 15%;
+}
+article>h3{
+    font-size:1.4rem;
+    margin-bottom:0;
+}
+article>h4{
+    margin-top:0;
+    font-size:0.9rem;
+    font-weight: normal;
+}
+article{
+    padding-bottom:1rem;
+    padding-top:1rem;
+    border-bottom: 1px solid honeydew;
+}
+input{
+    border:1px solid #5bbf70;
+    border-radius: 5px;
+    color:#5bbf70;
+    padding:5px;
+    background-color:transparent;
+    transition:color 0.2s, background-color 0.3s;
+    cursor:pointer;
+}
+input:hover{
+    color:white;
+    background-color: #5bbf70;
+}
+#Title{
+    font-size:2rem;
+    margin-bottom:0;
+    font-style: italic;
+    text-transform:uppercase;
+}
+#Data{
+    margin-top:0;
+    font-size:1.2rem;
+    font-weight: normal;
+}

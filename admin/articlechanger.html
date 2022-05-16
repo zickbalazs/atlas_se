@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/adminhub.css">
+    <link rel="stylesheet" href="../js/node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../js/node_modules/bootstrap-icons/font/bootstrap-icons.css">
-    <title>Atlas SE Adminisztráció</title>
+    <link rel="stylesheet" href="../css/adminhub.css">
+    <title>Atlas SE - Cikk módosítás</title>
 </head>
 <body>
     <header>
@@ -18,7 +19,7 @@
         <p><a href="/admin/users"><i class="bi bi-file-earmark-person"></i>Felhasználók</a></p>
     </nav>
     <main>
-        <table>
+        <table class="table">
             <thead>
                 <tr>
                     <th>Azonosító</th>
@@ -28,13 +29,13 @@
                     <th>Rövid cikk</th>
                     <th>Teljes szöveg</th>
                     <th>Kép</th>
-                    <th>Kategória</th>
                 </tr>
             </thead>
             <tbody>
 
             </tbody>
         </table>
+        <div class="editor"></div>
         <script src="../js/articleGetter.js"></script>
     </main>
     <footer class="footerflex">
@@ -42,6 +43,7 @@
         <p id="copy">Készítette Zick Balázs &copy;2022.</p>
         <p id="mail"><a href="mailto:balazs.zick2@gmail.com"><i class="bi bi-envelope"></i></a></p>
     </footer>
+    <script src="../js/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/moontoggler.js"></script>
     <!--<script src="../js/check.js"></script>-->
 </body>

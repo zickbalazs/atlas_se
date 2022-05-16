@@ -52,7 +52,7 @@ nav{
     text-decoration: none;
     transition: color 0.2s;
 }
-article{
+main{
     width: 96%;
     margin:auto;
     border-radius: 5px;
@@ -228,10 +228,10 @@ button::after{
     button{
         display:block;
     }
-    article>.pic{
+    main>.pic{
         width: 95%;
     }
-    article{
+    main{
         width: 90%;
     }
     .artFlex{
